@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "craftPickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Conquer all the world"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:stone_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "The perfect tool!"
+    }
+  },
+  "requirements": [
+    [
+      "craftPickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

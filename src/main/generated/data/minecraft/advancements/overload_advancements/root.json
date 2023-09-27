@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "text": "Maybe it's time to make a pickaxe!!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:cobblestone"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Your First Cobblestone Block"
+    }
+  },
+  "requirements": [
+    [
+      "got_cobblestone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
