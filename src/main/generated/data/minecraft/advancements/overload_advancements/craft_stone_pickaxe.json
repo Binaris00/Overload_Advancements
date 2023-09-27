@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:overload_advancements/root",
   "criteria": {
-    "got_cobblestone": {
+    "craft_stone_pickaxe": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cobblestone"
+              "minecraft:stone_pickaxe"
             ]
           }
         ]
@@ -15,23 +16,23 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Good material to make a pickaxe"
+      "text": "Prepare to explore the mines"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:stone_pickaxe",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "text": "Your first cobblestone block!"
+      "text": "The loyal tool!"
     }
   },
   "requirements": [
     [
-      "got_cobblestone"
+      "craft_stone_pickaxe"
     ]
   ],
   "sends_telemetry_event": true

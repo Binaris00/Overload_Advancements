@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:overload_advancements/craft_stone_pickaxe",
   "criteria": {
-    "got_cobblestone": {
+    "craft_iron_pickaxe": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cobblestone"
+              "minecraft:iron_pickaxe"
             ]
           }
         ]
@@ -15,23 +16,23 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Good material to make a pickaxe"
+      "text": "Perfect to mine other ores"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:iron_pickaxe",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "text": "Your first cobblestone block!"
+      "text": "A necessary update"
     }
   },
   "requirements": [
     [
-      "got_cobblestone"
+      "craft_iron_pickaxe"
     ]
   ],
   "sends_telemetry_event": true

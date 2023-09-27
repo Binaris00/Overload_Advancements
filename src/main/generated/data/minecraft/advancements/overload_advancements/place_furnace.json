@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:overload_advancements/craft_stone_pickaxe",
+  "criteria": {
+    "placeFurnace": {
+      "conditions": {
+        "block": "minecraft:furnace"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Used to smelt whatever you want"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:furnace"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Now, where are the cookies?"
+    }
+  },
+  "requirements": [
+    [
+      "placeFurnace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

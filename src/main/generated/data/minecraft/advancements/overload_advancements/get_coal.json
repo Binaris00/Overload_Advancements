@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:overload_advancements/root",
   "criteria": {
-    "craftPickaxe": {
+    "get_coal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stone_pickaxe"
+              "minecraft:coal"
             ]
           }
         ]
@@ -16,22 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "text": "Conquer all the world"
+      "translate": "Use with a furnace"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:stone_pickaxe",
-      "nbt": "{Damage:0}"
+      "item": "minecraft:coal"
     },
     "show_toast": true,
     "title": {
-      "text": "The perfect tool!"
+      "translate": "The underrated ore"
     }
   },
   "requirements": [
     [
-      "craftPickaxe"
+      "get_coal"
     ]
   ],
   "sends_telemetry_event": true

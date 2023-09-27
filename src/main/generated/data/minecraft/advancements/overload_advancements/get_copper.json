@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:overload_advancements/get_coal",
   "criteria": {
-    "got_cobblestone": {
+    "get_copper": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cobblestone"
+              "minecraft:raw_copper"
             ]
           }
         ]
@@ -15,23 +16,22 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Good material to make a pickaxe"
+      "translate": "And, how can I use this?"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:copper_ingot"
     },
     "show_toast": true,
     "title": {
-      "text": "Your first cobblestone block!"
+      "translate": "Electric conductor"
     }
   },
   "requirements": [
     [
-      "got_cobblestone"
+      "get_copper"
     ]
   ],
   "sends_telemetry_event": true
