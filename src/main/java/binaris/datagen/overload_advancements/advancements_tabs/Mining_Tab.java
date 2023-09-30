@@ -4,8 +4,7 @@ import binaris.datagen.overload_advancements.AdvancementProvider;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
-import net.minecraft.advancement.criterion.EnterBlockCriterion;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
@@ -28,8 +27,22 @@ public class Mining_Tab implements Consumer<Consumer<AdvancementEntry>> {
                         true,
                         false
                 )
-                .criterion("got_cobblestone", InventoryChangedCriterion.Conditions.items(Items.COBBLESTONE))
+                .criterion("get_cobblestone", InventoryChangedCriterion.Conditions.items(Items.COBBLESTONE))
                 .build(advancementConsumer, AdvancementProvider.MOD_ID + "/root");
+
+        AdvancementEntry findDeepEmerald = Advancement.Builder.create().parent(rootAdvancement)
+                .display(
+                        Items.DEEPSLATE_EMERALD_ORE,
+                        Text.literal("Most rare ore"),
+                        Text.literal("Why do you obtain this?"),
+                        null,
+                        AdvancementFrame.CHALLENGE,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("find_deep_emerald", InventoryChangedCriterion.Conditions.items(Items.DEEPSLATE_EMERALD_ORE))
+                .build(advancementConsumer, AdvancementProvider.MOD_ID + "/find_deep_emerald");
 
         AdvancementEntry craftStonePickaxe = Advancement.Builder.create().parent(rootAdvancement)
                 .display(
@@ -59,7 +72,7 @@ public class Mining_Tab implements Consumer<Consumer<AdvancementEntry>> {
                 .criterion("craft_iron_pickaxe", InventoryChangedCriterion.Conditions.items(Items.IRON_PICKAXE))
                 .build(advancementConsumer, AdvancementProvider.MOD_ID + "/craft_iron_pickaxe");
 
-        Advancement placeFurnace = Advancement.Builder.create().parent(craftStonePickaxe)
+        AdvancementEntry placeFurnace = Advancement.Builder.create().parent(craftStonePickaxe)
                 .display(
                         Items.FURNACE,
                         Text.literal("Now, where are the cookies?"),
@@ -70,15 +83,28 @@ public class Mining_Tab implements Consumer<Consumer<AdvancementEntry>> {
                         true,
                         false
                 )
-                .criterion("placeFurnace", EnterBlockCriterion.Conditions.block(Blocks.FURNACE))
-                .build(advancementConsumer, AdvancementProvider.MOD_ID + "/place_furnace").value();
+                .criterion("place_furnace", ItemCriterion.Conditions.createPlacedBlock(Blocks.FURNACE))
+                .build(advancementConsumer, AdvancementProvider.MOD_ID + "/place_furnace");
 
+        Advancement placeBlastFurnace = Advancement.Builder.create().parent(placeFurnace)
+                .display(
+                        Items.BLAST_FURNACE,
+                        Text.literal("Optimized production"),
+                        Text.literal("Perfect for smelting ores"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("place_blast_furnace", ItemCriterion.Conditions.createPlacedBlock(Blocks.BLAST_FURNACE))
+                .build(advancementConsumer, AdvancementProvider.MOD_ID + "/place_blast_furnace").value();
 
         AdvancementEntry getCoal = Advancement.Builder.create().parent(rootAdvancement)
                 .display(
                         Items.COAL,
-                        Text.translatable("The underrated ore"),
-                        Text.translatable("Use with a furnace"),
+                        Text.translatable("Ore for burning"),
+                        Text.translatable("Try to use with a furnace"),
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -91,8 +117,8 @@ public class Mining_Tab implements Consumer<Consumer<AdvancementEntry>> {
         Advancement getIron = Advancement.Builder.create().parent(getCoal)
                 .display(
                         Items.IRON_INGOT,
-                        Text.translatable("Always needed ore"),
-                        Text.translatable(""),
+                        Text.translatable("New Era"),
+                        Text.translatable("Maybe an anvil will be the perfect use"),
                         null,
                         AdvancementFrame.TASK,
                         true,
