@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:overload_advancements/root",
+  "criteria": {
+    "craft_stone_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Upgrade your pickaxe"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:stone_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "The loyal tool!"
+    }
+  },
+  "requirements": [
+    [
+      "craft_stone_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

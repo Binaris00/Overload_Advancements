@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/get_coal",
+  "criteria": {
+    "get_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Maybe an anvil will be the perfect use"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:iron_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "New Era"
+    }
+  },
+  "requirements": [
+    [
+      "get_iron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

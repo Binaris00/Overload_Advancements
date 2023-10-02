@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/get_amethyst_shard",
+  "criteria": {
+    "craft_spyglass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spyglass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Craft a spyglass"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:spyglass"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Classic Spyglass"
+    }
+  },
+  "requirements": [
+    [
+      "craft_spyglass"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

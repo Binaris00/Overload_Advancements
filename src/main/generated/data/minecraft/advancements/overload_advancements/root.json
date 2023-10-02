@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "get_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Good material to make a pickaxe"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:cobblestone"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Mining"
+    }
+  },
+  "requirements": [
+    [
+      "get_cobblestone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:overload_advancements/place_furnace",
+  "criteria": {
+    "place_blast_furnace": {
+      "conditions": {
+        "location": [
+          {
+            "block": "minecraft:blast_furnace",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Perfect for smelting ores"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:blast_furnace"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Optimized production"
+    }
+  },
+  "requirements": [
+    [
+      "place_blast_furnace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/root",
+  "criteria": {
+    "get_amethyst_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:amethyst_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Obtain amethyst shard"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Amethyst from the crystal gems"
+    }
+  },
+  "requirements": [
+    [
+      "get_amethyst_shard"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/get_lava_bucket",
+  "criteria": {
+    "get_obsidian": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:obsidian"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Obtain a block of Obsidian"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Ice bucket challenge"
+    }
+  },
+  "requirements": [
+    [
+      "get_obsidian"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

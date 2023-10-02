@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/get_coal",
+  "criteria": {
+    "get_diamond": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Acquire diamonds"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:diamond"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Diamonds!!"
+    }
+  },
+  "requirements": [
+    [
+      "get_diamond"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

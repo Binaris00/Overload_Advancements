@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:overload_advancements/craft_iron_pickaxe",
+  "criteria": {
+    "craft_diamond_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Maybe this could work in other dimension..."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:diamond_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Finest tool"
+    }
+  },
+  "requirements": [
+    [
+      "craft_diamond_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,68 @@
+{
+  "parent": "minecraft:overload_advancements/craft_iron_pickaxe",
+  "criteria": {
+    "get_raw_copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:raw_copper_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_raw_gold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:raw_gold_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_raw_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:raw_iron_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain all the 3 raw blocks"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:raw_iron_block"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Ores compression"
+    }
+  },
+  "requirements": [
+    [
+      "get_raw_iron"
+    ],
+    [
+      "get_raw_gold"
+    ],
+    [
+      "get_raw_copper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

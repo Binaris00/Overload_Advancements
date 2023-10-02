@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:overload_advancements/craft_iron_pickaxe",
+  "criteria": {
+    "craft_golden_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Maybe this was a bad idea..."
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:golden_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "A unnecessary update"
+    }
+  },
+  "requirements": [
+    [
+      "craft_golden_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

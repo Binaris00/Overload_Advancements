@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:overload_advancements/get_coal",
+  "criteria": {
+    "get_gold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "Obtain gold"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Most Value Ore"
+    }
+  },
+  "requirements": [
+    [
+      "get_gold"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
